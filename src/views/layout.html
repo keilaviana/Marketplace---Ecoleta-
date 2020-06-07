@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<!-- Hypertext hiper texto Markup Marcação de texto Language Linguagem -->
+
+<html lang="pt_br">
+    <head>
+        <meta charset="UTF-8">
+        <!--aceita caracteres especiais-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--faz com que nosso site caiba em qualquer tela-->
+
+        {% block title %}{% endblock title %}
+
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="./styles/main.css">
+
+        {% block styles %}{% endblock styles %}
+
+    </head>
+    <body>
+
+        <div id="{{ pageId }}">
+            {% block content %}{% endblock content %}
+        </div>
+
+        {% block modal %}{% endblock modal %}
+
+        {% block scripts %}{% endblock scripts %}
+
+    </body>
+</html>
